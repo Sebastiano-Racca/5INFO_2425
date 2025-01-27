@@ -1,28 +1,28 @@
 <script lang="ts">
 	import TodoList from '$lib/components/TodoList.svelte';
-	import type { Item } from '$lib/types/Item';
+	import type { Item } from '$lib/types/item';
+	import { onMount } from 'svelte';
 
-	const todo: Item[] = [
-		{
-			id: 0,
-			done: false,
-			description: 'Descrizione 1',
-			priority: 0
-		}
-	];
+	let todo: Item[] = [];
+
+	onMount(() => {
+		todo = Array.from({ length: localStorage.length }, (_, i) => localStorage.key(i))
+			.filter((key) => key?.startsWith('todo-') || false)
+			.map((key) => JSON.parse(localStorage.getItem(key || '') || '{}'));
+	});
 </script>
 
 <div>
 	<h1>ToDos</h1>
 
-	<TodoList {todo} />
+	<TodoList bind:todo />
 </div>
 
 <style lang="scss">
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
 </style>

@@ -1,23 +1,16 @@
 <script>
-    import Icon from "./icon.svelte";
-    import TodoItem from "./todo_item.svelte";
+    import Icon from "./Icon.svelte";
+    import ToDoItem from "./ToDo-Item.svelte";
 </script>
 
-<h1>ToDos</h1>
-
+<h1>Todos</h1>
 <div class="todo-list">
     <div class="header"><Icon name="tag"/></div>
     <div class="header"><Icon name="task_alt"/></div>
     <div class="header"><Icon name="list"/></div>
     <div class="header"><Icon name="schedule"/></div>
     <div class="header"><Icon name="add_box"/></div>
-
-    <TodoItem />
-
-    <TodoItem />
-
-    <TodoItem />
-
+    <ToDoItem todo={{id:1,task:"task",done:false,priority:1}}/>  
 </div>
 
 <style>

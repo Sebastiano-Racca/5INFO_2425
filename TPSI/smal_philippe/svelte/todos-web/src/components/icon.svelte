@@ -1,13 +1,14 @@
 <svelte:head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
 </svelte:head>
 
 <script>
-    export let name;
+    export let nome
 </script>
 
 <span class="material-icons-outlined icon">
-    {name}
+    {nome}
 </span>
 
 <style>

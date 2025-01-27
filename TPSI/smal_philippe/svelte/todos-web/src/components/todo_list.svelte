@@ -3,21 +3,19 @@
     import TodoItem from "./todo_item.svelte";
 </script>
 
-<h1>ToDos</h1>
-
+<h1>Todos</h1>
 <div class="todo-list">
-    <div class="header"><Icon name="tag"/></div>
-    <div class="header"><Icon name="task_alt"/></div>
-    <div class="header"><Icon name="list"/></div>
-    <div class="header"><Icon name="schedule"/></div>
-    <div class="header"><Icon name="add_box"/></div>
+    <div class="header"><Icon nome="tag"/></div>
+    <div class="header"><Icon nome="task_alt"/></div>
+    <div class="header"><Icon nome="list"/></div>
+    <div class="header"><Icon nome="schedule"/></div>
+    <div class="header"><Icon nome="add_box"/></div>
 
     <TodoItem />
 
     <TodoItem />
 
     <TodoItem />
-
 </div>
 
 <style>

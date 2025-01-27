@@ -1,13 +1,12 @@
 <script>
-    import TodoList from "../components/todo_list.svelte";
+ import TodoList from "../components/todo_list.svelte";
 </script>
-
 <main>
     <TodoList />
 </main>
 
 <style>
-    main {
+    main{
         border: 3px solid red;
         width: 60%;
         height: 90vh;

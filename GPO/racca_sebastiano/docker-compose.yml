@@ -1,0 +1,11 @@
+services:
+  projectlibre:
+    image: profmancusoa/projectlibre
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/shm:/dev/shm
+      - ${PWD}:/root/gpo
+    devices:
+      - /dev/dri:/dev/dri

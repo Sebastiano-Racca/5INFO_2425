@@ -6,8 +6,10 @@
 	export let todo: Item[];
 
 	const deleteItem = (id: number) => {
-		todo = todo.filter((item) => item.id != id);
-		localStorage.removeItem(`todo-${id}`);
+		if(confirm("Vuoi davvero eliminare l'item?")) {
+			todo = todo.filter((item) => item.id != id);
+			localStorage.removeItem(`todo-${id}`);
+		}
 	};
 
 	const updateItem = <T extends keyof Item>(id: number, property: T, value: Item[T]) => {
@@ -20,7 +22,7 @@
 
 	const addItem = () => {
 		const newTodo = {
-			id: todo.length,
+			id: todo.reduce((a, b) => Math.max(a, b.id), -1) + 1,
 			done: false,
 			description: '',
 			priority: 0

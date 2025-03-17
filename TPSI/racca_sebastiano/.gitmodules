@@ -1,0 +1,3 @@
+[submodule "svelte/ToDoS-web"]
+	path = svelte/ToDoS-web
+	url = https://github.com/Sebastiano-Racca/ToDoS-web

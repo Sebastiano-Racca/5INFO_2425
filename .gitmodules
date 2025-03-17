@@ -1,0 +1,3 @@
+[submodule "TPSI/racca_sebastiano/svelte/ToDoS-web"]
+	path = TPSI/racca_sebastiano/svelte/ToDoS-web
+	url = https://github.com/Sebastiano-Racca/ToDoS-web

@@ -1,0 +1,6 @@
+services:
+  pwd:
+    image: profmancusoa/password-cracking:latest
+    stdin_open: true
+    tty: true
+    restart: no
